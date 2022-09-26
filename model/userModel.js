@@ -15,8 +15,7 @@ const userModel = new schema({
     Username:{
         type: String,
         required:[true, "Username is required"],
-        unique:true,
-        min:[String.length, `Username must be greater] than ${String.length}`]
+        unique:true
     },
     Password:{
         type: String,

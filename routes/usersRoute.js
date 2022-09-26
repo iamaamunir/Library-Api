@@ -33,7 +33,7 @@ userRoute.post("/authenticateuser/:id", (req, res) => {
     .then((user) => {
       if (
         user.Password == loginDetails.Password &&
-        user.Username == loginDetails.Username
+        user.Username == loginDetails.Username 
       ) {
         res.status(200).send(user);
       } else {
