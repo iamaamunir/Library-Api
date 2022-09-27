@@ -35,7 +35,9 @@ userRoute.post("/authenticateuser/:id", (req, res) => {
         user.Password == loginDetails.Password &&
         user.Username == loginDetails.Username 
       ) {
-        res.status(200).send(user);
+        res.status(200).send({
+          message:'Welcome Back'
+        });
       } else {
         res.status(400).send({
           message: "User does not exist",
